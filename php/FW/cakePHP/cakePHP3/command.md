@@ -38,3 +38,25 @@
 ```shell
 ./bin/cake migrations rollback -t マイグレーションID
 ```
+
+<br>
+
+---
+
+<br>
+
+# Seeder
+### 既存DBから指定のテーブルを基にSeederファイル作成
+```shell
+./bin/cake bake seed --data テーブル名
+```
+
+### 全てのSeeder適用
+```shell
+./bin/cake migrations seed
+```
+
+### 指定したSeederの適用
+```shell
+./bin/cake migrations seed --seed 適用したいSeederファイル名(拡張子なし)
+```
