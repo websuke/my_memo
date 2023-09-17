@@ -14,3 +14,13 @@
 ./bin/cake migrations status
 ```
 ※上記はphinxlogテーブルを見て判断した結果を返している。
+
+### migrationの適用取り消し(1つ前)
+```shell
+./bin/cake migrations rollback
+```
+
+### migrationの適用取り消し(指定したマイグレーションIDの次まで)
+```shell
+./bin/cake migrations rollback -t マイグレーションID
+```
