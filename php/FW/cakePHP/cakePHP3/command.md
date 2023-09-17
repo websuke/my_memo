@@ -15,6 +15,20 @@
 ```
 ※上記はphinxlogテーブルを見て判断した結果を返している。
 
+---
+
+### migrationの適用(全部)
+```shell
+./bin/cake migrations migrate
+```
+
+### migrationの適用(指定したマイグレーションIDまで)
+```shell
+./bin/cake migrations migrate -t マイグレーションID
+```
+
+--- 
+
 ### migrationの適用取り消し(1つ前)
 ```shell
 ./bin/cake migrations rollback
