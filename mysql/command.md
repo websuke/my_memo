@@ -9,6 +9,7 @@ sudo mysqldump -u ユーザー名 -p -B 対象のDB名 > カレントから見�
 ```
 
 <br>
+
 ---
 
 ### rootユーザーでsampleDBからdump.sqlファイルをカレントに作成する場合
