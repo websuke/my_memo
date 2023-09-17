@@ -48,3 +48,34 @@ sudo mysql -u ユーザー名 -p -h ホスト名 --port ポート番号 DB名 < 
 ```shell
 sudo mysql -u root -p -h localhost --port 3306 sample < dump.sql
 ```
+
+<br>
+
+---
+
+<br>
+
+# テーブル削除
+### 全テーブルを削除する方法
+```shell
+# mysqlにログインする
+
+# DATABASEを指定する
+use 全テーブル削除対象のDB名;
+
+# 以下SQLを実行する
+SELECT CONCAT(
+	'DROP TABLE ', GROUP_CONCAT(
+		CONCAT('`',table_name,'`')
+	),';'
+) AS statement FROM information_schema.tables 
+WHERE table_schema = '全テーブル削除対象のDB名' AND table_name LIKE '%';
+
+# 以下のSQLが作成されるためコピペして実行
++--------------------------------------------+
+| statement                                  |
++--------------------------------------------+
+| DROP TABLE `テーブル1`,`テーブル2`, `...`; |
++--------------------------------------------+
+1 row in set (0.00 sec)
+```
