@@ -41,14 +41,25 @@ sudo mysqldump --no-tablespaces -u root以外のユーザー名 -p -B sample > d
 # dumpファイル　インポートコマンド
 ### 基本形
 ```shell
-sudo mysql -u ユーザー名 -p -h ホスト名 --port ポート番号 DB名 < インポートするファイルのパス
+sudo mysql -u ユーザー名 -p -h ホスト名 --port ポート番号 -B DB名 < インポートするファイルのパス
 ```
 
-### rootユーザーでlocalのポート番号3306のsampleDBにdump.sqlをインポートする場合
+### 最低限の基本形
+```shell
+sudo mysql -u ユーザー名 -p -B DB名 < インポートするファイルのパス
+```
+
+### rootユーザーでlocalのポート番号3306のsampleDBにカレントに存在するdump.sqlをインポートする場合
 ```shell
 sudo mysql -u root -p -h localhost --port 3306 sample < dump.sql
 ```
 
+### 任意のユーザーでsampleDBにカレントに存在するdump.sqlをインポートする場合
+※localhostの場合、defaultポートの場合省略可能
+```shell
+sudo mysql -u cake_project -p -B sample < dump.sql
+Enter password: ここで任意のユーザーのパスワードを入力
+```
 <br>
 
 ---
