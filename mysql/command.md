@@ -38,7 +38,7 @@ sudo mysqldump --no-tablespaces -u root以外のユーザー名 -p -B sample > d
 
 <br>
 
-# dumpファイル　インポートコマンド
+# dumpファイル　importコマンド
 ### 基本形
 ```shell
 sudo mysql -u ユーザー名 -p -h ホスト名 --port ポート番号 -B DB名 < インポートするファイルのパス
@@ -48,6 +48,12 @@ sudo mysql -u ユーザー名 -p -h ホスト名 --port ポート番号 -B DB名
 ```shell
 sudo mysql -u ユーザー名 -p -B DB名 < インポートするファイルのパス
 ```
+
+<br>
+
+---
+
+<br>
 
 ### rootユーザーでlocalのポート番号3306のsampleDBにカレントに存在するdump.sqlをインポートする場合
 ```shell
