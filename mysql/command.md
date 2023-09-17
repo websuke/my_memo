@@ -32,6 +32,8 @@ sudo mysqldump --no-tablespaces -u root以外のユーザー名 -p -B sample > d
 
 <br>
 
+---
+
 # dumpファイル　インポートコマンド
 ### 基本形
 ```shell
