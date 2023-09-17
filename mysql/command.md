@@ -12,6 +12,8 @@ sudo mysqldump -u ユーザー名 -p -B 対象のDB名 > カレントから見�
 
 ---
 
+<br>
+
 ### rootユーザーでsampleDBからdump.sqlファイルをカレントに作成する場合
 ```shell
 sudo mysqldump -u root -p -B sample > dump.sql
@@ -33,6 +35,8 @@ sudo mysqldump --no-tablespaces -u root以外のユーザー名 -p -B sample > d
 <br>
 
 ---
+
+<br>
 
 # dumpファイル　インポートコマンド
 ### 基本形
